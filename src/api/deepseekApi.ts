@@ -1,7 +1,7 @@
 // 更新前端调用
 import axios from "axios";
 
-const API_BASE = "http://36.150.237.25:3000/api/deepseek";
+const API_BASE = import.meta.env.VITE_API_BASE_URL+'/api/deepseek';
 interface ChatMsg {
   id: number;
   role: "user" | "bot";

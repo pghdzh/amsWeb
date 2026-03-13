@@ -21,9 +21,7 @@ export const getMusicList = (options?: Record<string, any>): Promise<any> => {
  */
 export const getMusicUrl = (fileName: string): string => {
   if (!fileName) return "";
-  // 若你希望返回完整 URL（带域名），可以改为：
-  // const base = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/$/, "");
-  // return `${base}/music/${encodeURIComponent(fileName)}`;
-  return `http://36.150.237.25:3000/music/${encodeURIComponent(fileName)}`;
+  const base = import.meta.env.VITE_MEDIA_BASE_URL || ""; // 生产环境为空
+  // 确保 base 末尾没有多余的斜杠，然后拼接
+  return `${base}/music/${encodeURIComponent(fileName)}`;
 };
-

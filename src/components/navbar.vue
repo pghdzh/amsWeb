@@ -83,7 +83,7 @@
 
       <!-- 霜落映界（独立显示，PC端放在最后） -->
       <a
-        href="http://36.150.237.25/#/redirector"
+        href="https://36.150.237.25/#/redirector"
         target="_blank"
         rel="noopener"
         class="nav-item pc-only"
@@ -164,7 +164,7 @@ const moreInternalItems = internalNavItems.slice(5);
 // 外部链接
 const externalItem = {
   name: "霜落映界",
-  path: "http://36.150.237.25/#/redirector",
+  path: "https://36.150.237.25/#/redirector",
   external: true,
 };
 
@@ -181,8 +181,7 @@ const dropdownOpen = ref(false);
 
 const siteId = "ams";
 const onlineCount = ref<number | null>(null);
-
-const socket: any = io("http://36.150.237.25:3000", {
+const socket: any = io(import.meta.env.VITE_API_BASE_URL, {
   query: { siteId },
 });
 
@@ -240,7 +239,9 @@ const initAudio = () => {
   ];
   const randomSong = songs[Math.floor(Math.random() * songs.length)];
   // console.log('randomSong',randomSong)
-  const audioUrl = encodeURI(`http://36.150.237.25:3000/music/${randomSong}`);
+  const audioUrl = encodeURI(
+    import.meta.env.VITE_API_BASE_URL + `/music/${randomSong}`
+  );
   const newAudio = new Audio(audioUrl);
   newAudio.loop = true;
   newAudio.addEventListener("error", (e) => {

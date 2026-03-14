@@ -83,7 +83,7 @@
 
       <!-- 霜落映界（独立显示，PC端放在最后） -->
       <a
-        href="https://36.150.237.25/#/redirector"
+        href="https://slty.site/#/redirector"
         target="_blank"
         rel="noopener"
         class="nav-item pc-only"
@@ -164,7 +164,7 @@ const moreInternalItems = internalNavItems.slice(5);
 // 外部链接
 const externalItem = {
   name: "霜落映界",
-  path: "https://36.150.237.25/#/redirector",
+  path: "https://slty.site/#/redirector",
   external: true,
 };
 

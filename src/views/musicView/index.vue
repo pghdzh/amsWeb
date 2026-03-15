@@ -172,7 +172,7 @@
             <li
               v-for="(item, idx) in filteredList"
               :key="item.name || idx"
-              :class="{ active: idx === index }"
+              :class="{ active: current && item.name === current.name }"
               @click="selectTrack(idx)"
               tabindex="0"
               @keyup.enter="selectTrack(idx)"
@@ -398,12 +398,15 @@ function togglePlay() {
   else play();
 }
 
-function selectTrack(i: number) {
-  if (i < 0 || i >= list.value.length) return;
-  index.value = i;
+function selectTrack(idxInFiltered: number) {
+  const item = filteredList.value[idxInFiltered];
+  if (!item) return;
+  // 用唯一字段（如 name）在原始列表中找到正确索引
+  const originalIndex = list.value.findIndex((it) => it.name === item.name);
+  if (originalIndex === -1) return;
+  index.value = originalIndex;
   loadCurrent(true);
 }
-
 // 音频事件
 function onTimeUpdate(e: Event) {
   const t = e.target as HTMLAudioElement;
@@ -1260,7 +1263,7 @@ function globalKeydown(e: KeyboardEvent) {
     transition: all 0.3s;
     border: 1px solid transparent;
     &:hover {
-      transform: translateX(6px);
+      transform: translateX(-6px);
       border-color: var(--pink-core);
       background: rgba(255, 140, 176, 0.05);
     }

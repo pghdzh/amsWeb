@@ -111,6 +111,10 @@
             官方OST《以虚无紧系因果》中隐藏摩斯密码，截取后翻译为
             <span class="code">BCAKHOME</span> —— “回家”
           </p>
+          <p class="easter-desc">
+            3.2版本活动诸星密语中最后一位角色就是小爱，活动页面中也有摩斯密码翻译为
+            <span class="code">I Will Protect You</span> —— “我会保护你”
+          </p>
         </div>
         <div class="easter-egg">
           <div class="easter-header">

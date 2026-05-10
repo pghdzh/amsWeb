@@ -69,36 +69,41 @@
           <span class="badge-ems">EMS-DATA</span>
         </div>
         <div class="timeline-grid">
+          <!-- 3.0初登场 -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-ver">2.8版本</span>
-              <h3>伏笔埋下</h3>
-              <p>“那一晚上的失忆以及手的虚化”埋下爱弥斯相关伏笔</p>
+              <span class="timeline-ver">3.0版本 · 序章·风起星海</span>
+              <h3>“旅途愉快”</h3>
+              <p>
+                爱弥斯在拉海洛篇初次登场为漂泊者解围，留下开朗的印象；但她温暖的告别，实则是一场酝酿已久的永别序章。
+              </p>
             </div>
           </div>
+          <!-- 3.1真相揭晓 -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-ver">3.0版本</span>
-              <h3>初次登场</h3>
-              <p>第一次相遇即是告别</p>
+              <span class="timeline-ver">3.1版本 · 远航星</span>
+              <h3>永不消逝的电子幽灵</h3>
+              <p>
+                真相揭晓：爱弥斯是已牺牲的电子幽灵。剧情结局其躯体空洞坐在车站，意识在虚质空间漂流，留下“远航星”的美丽遗憾
+              </p>
             </div>
           </div>
+
+          <!-- 3.3最终结局 -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-ver">3.1版本</span>
-              <h3>真相揭晓</h3>
-              <p>“我不后悔，但还是...好舍不得你”</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-ver">时间闭环</span>
-              <h3>因果循环</h3>
-              <p>“...别...难过...”</p>
+              <span class="timeline-ver">3.3版本 · 自星海尽处回响</span>
+              <h3>群星归途 · 爱弥斯回家了</h3>
+              <p>
+                在漂泊者和众人的奋战下，爱弥斯被成功接回。<span
+                  class="highlight"
+                  >电子幽灵状态被正式解除，她重返拉海洛。</span
+                ><br />“那个被困在虚质空间的粉发女孩终于回家了”。
+              </p>
             </div>
           </div>
         </div>
@@ -1462,6 +1467,11 @@ onBeforeUnmount(() => {
         margin: 0;
         font-size: 0.9rem;
         color: rgba(255, 255, 255, 0.8);
+      }
+      .highlight {
+        color: var(--pink-core);
+        font-weight: bold;
+        padding: 0 2px;
       }
     }
   }
